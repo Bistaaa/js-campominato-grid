@@ -53,10 +53,31 @@ header{
 
   /* MAIN */
 
+main{
+    position: relative;
+}
 
+#grid{
+    height: 500px;
+    width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
 
+#grid.active{
+    display: block;
+}
 
+.square{
+    height: calc(100% / 10);
+    width: calc(100% / 10);
+    border: 1px solid black;
+    float: left;
 
+}
 
 
 
