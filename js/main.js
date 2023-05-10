@@ -22,11 +22,17 @@ play.addEventListener("click", function () {
         //aggiungiamo la classe .square ai quadrati
         newSquare.classList.add("square");
 
+        //inseriamo il numer corrispondente al quadrato
+        newSquare.append(i + 1);
+
         //aggiungiamo funzioni al click dei quadrati
         newSquare.addEventListener("click", function () {
 
             //aggiungiamo la classe .blue al quadrato cliccato
             colorSquare(newSquare, "blue");
+
+            // visualizziamo il numero della casella selezionata nella console
+            console.log("Numero casella selezionata:", i + 1);
         });
     }   
 });
