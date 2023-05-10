@@ -6,6 +6,7 @@ console.log(play);
 const grid = document.getElementById("grid");
 console.log(grid);
 
+
 //aggiungiamo funzionamento al click
 play.addEventListener("click", function () {
 
@@ -20,23 +21,14 @@ play.addEventListener("click", function () {
 
         //aggiungiamo la classe .square ai quadrati
         newSquare.classList.add("square");
-    }
-
-    //selezioniamo i quadrati
-    const squares = document.getElementsByClassName("square");
-    console.log(squares)
-
-    //creiamo un ciclo per tutti i quadrati
-    for (let i = 0; i < squares.length; i++) {
 
         //aggiungiamo funzioni al click dei quadrati
-        squares[i].addEventListener("click", function () {
+        newSquare.addEventListener("click", function () {
 
             //aggiungiamo la classe .blue al quadrato cliccato
-            const blueSquare = colorSquare ("blue");
-            console.log(blueSquare);
+            colorSquare(newSquare, "blue");
         });
-    }
+    }   
 });
 
 
@@ -54,7 +46,6 @@ function createSquare() {
 }
 
 //aggiunta classe per colore
-function colorSquare(color) {
-    const elementColor = document.getElementsByClassName("square");
-    elementColor.classList.add(color);  
+function colorSquare(element, color) {
+    element.classList.add(color);  
 }
