@@ -76,9 +76,11 @@ main{
     width: calc(100% / 10);
     border: 1px solid black;
     float: left;
-
 }
 
+.blue{
+    background-color: dodgerblue;
+}
 
 
 
